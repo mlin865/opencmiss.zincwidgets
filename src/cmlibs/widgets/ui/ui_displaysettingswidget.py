@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'displaysettingswidget.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.4.2
+## Created by: Qt User Interface Compiler version 6.8.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -15,10 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QCheckBox, QFormLayout, QFrame,
-    QGridLayout, QHBoxLayout, QLabel, QLineEdit,
-    QRadioButton, QSizePolicy, QSlider, QSpacerItem,
-    QSpinBox, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFormLayout,
+    QFrame, QGridLayout, QHBoxLayout, QLabel,
+    QLineEdit, QRadioButton, QSizePolicy, QSlider,
+    QSpacerItem, QSpinBox, QVBoxLayout, QWidget)
 
 from cmlibs.widgets.fieldchooserwidget import FieldChooserWidget
 
@@ -32,8 +32,8 @@ class Ui_DisplaySettings(object):
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.displayMisc_frame = QFrame(DisplaySettings)
         self.displayMisc_frame.setObjectName(u"displayMisc_frame")
-        self.displayMisc_frame.setFrameShape(QFrame.NoFrame)
-        self.displayMisc_frame.setFrameShadow(QFrame.Raised)
+        self.displayMisc_frame.setFrameShape(QFrame.Shape.NoFrame)
+        self.displayMisc_frame.setFrameShadow(QFrame.Shadow.Raised)
         self.horizontalLayout_8 = QHBoxLayout(self.displayMisc_frame)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
@@ -52,7 +52,7 @@ class Ui_DisplaySettings(object):
 
         self.horizontalLayout_8.addWidget(self.displayZeroJacobianContours_checkBox)
 
-        self.displaytMisc_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.displaytMisc_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_8.addItem(self.displaytMisc_horizontalSpacer)
 
@@ -61,13 +61,13 @@ class Ui_DisplaySettings(object):
 
         self.displayData_frame = QFrame(DisplaySettings)
         self.displayData_frame.setObjectName(u"displayData_frame")
-        self.displayData_frame.setFrameShape(QFrame.NoFrame)
+        self.displayData_frame.setFrameShape(QFrame.Shape.NoFrame)
         self.verticalLayout = QVBoxLayout(self.displayData_frame)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.displayDataPoints_frame = QFrame(self.displayData_frame)
         self.displayDataPoints_frame.setObjectName(u"displayDataPoints_frame")
-        self.displayDataPoints_frame.setFrameShape(QFrame.NoFrame)
+        self.displayDataPoints_frame.setFrameShape(QFrame.Shape.NoFrame)
         self.horizontalLayout = QHBoxLayout(self.displayDataPoints_frame)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -101,27 +101,43 @@ class Ui_DisplaySettings(object):
 
         self.horizontalLayout.addWidget(self.displayDataProjectionPoints_checkBox)
 
-        self.displayDataContours_checkBox = QCheckBox(self.displayDataPoints_frame)
-        self.displayDataContours_checkBox.setObjectName(u"displayDataContours_checkBox")
-
-        self.horizontalLayout.addWidget(self.displayDataContours_checkBox)
-
         self.displayDataRadius_checkBox = QCheckBox(self.displayDataPoints_frame)
         self.displayDataRadius_checkBox.setObjectName(u"displayDataRadius_checkBox")
 
         self.horizontalLayout.addWidget(self.displayDataRadius_checkBox)
 
-        self.displayDataPoints_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.displayDataPoints_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout.addItem(self.displayDataPoints_horizontalSpacer)
 
 
         self.verticalLayout.addWidget(self.displayDataPoints_frame)
 
+        self.displayDataGroup_frame = QFrame(self.displayData_frame)
+        self.displayDataGroup_frame.setObjectName(u"displayDataGroup_frame")
+        self.displayDataGroup_frame.setFrameShape(QFrame.Shape.NoFrame)
+        self.displayDataGroup_frame.setFrameShadow(QFrame.Shadow.Plain)
+        self.formLayout = QFormLayout(self.displayDataGroup_frame)
+        self.formLayout.setObjectName(u"formLayout")
+        self.formLayout.setFieldGrowthPolicy(QFormLayout.FieldGrowthPolicy.FieldsStayAtSizeHint)
+        self.formLayout.setContentsMargins(0, 0, 0, 0)
+        self.displayDataGroup_label = QLabel(self.displayDataGroup_frame)
+        self.displayDataGroup_label.setObjectName(u"displayDataGroup_label")
+
+        self.formLayout.setWidget(0, QFormLayout.LabelRole, self.displayDataGroup_label)
+
+        self.displayDataGroup_fieldChooser = FieldChooserWidget(self.displayDataGroup_frame)
+        self.displayDataGroup_fieldChooser.setObjectName(u"displayDataGroup_fieldChooser")
+
+        self.formLayout.setWidget(0, QFormLayout.FieldRole, self.displayDataGroup_fieldChooser)
+
+
+        self.verticalLayout.addWidget(self.displayDataGroup_frame)
+
         self.displayDataField_frame = QFrame(self.displayData_frame)
         self.displayDataField_frame.setObjectName(u"displayDataField_frame")
-        self.displayDataField_frame.setFrameShape(QFrame.NoFrame)
-        self.displayDataField_frame.setFrameShadow(QFrame.Raised)
+        self.displayDataField_frame.setFrameShape(QFrame.Shape.NoFrame)
+        self.displayDataField_frame.setFrameShadow(QFrame.Shadow.Raised)
         self.horizontalLayout_12 = QHBoxLayout(self.displayDataField_frame)
         self.horizontalLayout_12.setObjectName(u"horizontalLayout_12")
         self.horizontalLayout_12.setContentsMargins(0, 0, 0, 0)
@@ -145,7 +161,7 @@ class Ui_DisplaySettings(object):
 
         self.horizontalLayout_12.addWidget(self.displayDataFieldLabelsDelta_radioButton)
 
-        self.displayDataFieldLabels_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.displayDataFieldLabels_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_12.addItem(self.displayDataFieldLabels_horizontalSpacer)
 
@@ -154,7 +170,7 @@ class Ui_DisplaySettings(object):
 
         self.displayDataMarkers_frame = QFrame(self.displayData_frame)
         self.displayDataMarkers_frame.setObjectName(u"displayDataMarkers_frame")
-        self.displayDataMarkers_frame.setFrameShape(QFrame.NoFrame)
+        self.displayDataMarkers_frame.setFrameShape(QFrame.Shape.NoFrame)
         self.horizontalLayout_7 = QHBoxLayout(self.displayDataMarkers_frame)
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
         self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
@@ -173,7 +189,7 @@ class Ui_DisplaySettings(object):
 
         self.horizontalLayout_7.addWidget(self.displayDataMarkerProjections_checkBox)
 
-        self.displayDataMarkers_horizontalSpacer = QSpacerItem(520, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.displayDataMarkers_horizontalSpacer = QSpacerItem(520, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_7.addItem(self.displayDataMarkers_horizontalSpacer)
 
@@ -182,8 +198,8 @@ class Ui_DisplaySettings(object):
 
         self.displayMarker_frame = QFrame(self.displayData_frame)
         self.displayMarker_frame.setObjectName(u"displayMarker_frame")
-        self.displayMarker_frame.setFrameShape(QFrame.NoFrame)
-        self.displayMarker_frame.setFrameShadow(QFrame.Raised)
+        self.displayMarker_frame.setFrameShape(QFrame.Shape.NoFrame)
+        self.displayMarker_frame.setFrameShadow(QFrame.Shadow.Raised)
         self.horizontalLayout_2 = QHBoxLayout(self.displayMarker_frame)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -197,7 +213,7 @@ class Ui_DisplaySettings(object):
 
         self.horizontalLayout_2.addWidget(self.displayMarkerNames_checkBox)
 
-        self.displayMarker_horizontalSpacer = QSpacerItem(750, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.displayMarker_horizontalSpacer = QSpacerItem(750, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_2.addItem(self.displayMarker_horizontalSpacer)
 
@@ -209,8 +225,8 @@ class Ui_DisplaySettings(object):
 
         self.displayNodes_frame = QFrame(DisplaySettings)
         self.displayNodes_frame.setObjectName(u"displayNodes_frame")
-        self.displayNodes_frame.setFrameShape(QFrame.NoFrame)
-        self.displayNodes_frame.setFrameShadow(QFrame.Raised)
+        self.displayNodes_frame.setFrameShape(QFrame.Shape.NoFrame)
+        self.displayNodes_frame.setFrameShadow(QFrame.Shadow.Raised)
         self.horizontalLayout_6 = QHBoxLayout(self.displayNodes_frame)
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
@@ -221,7 +237,7 @@ class Ui_DisplaySettings(object):
 
         self.displayNodeNumbers_checkBox = QCheckBox(self.displayNodes_frame)
         self.displayNodeNumbers_checkBox.setObjectName(u"displayNodeNumbers_checkBox")
-        sizePolicy = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.displayNodeNumbers_checkBox.sizePolicy().hasHeightForWidth())
@@ -242,7 +258,7 @@ class Ui_DisplaySettings(object):
 
         self.horizontalLayout_6.addWidget(self.displayNodeDerivativesVersion_spinBox)
 
-        self.displayNodes_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.displayNodes_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_6.addItem(self.displayNodes_horizontalSpacer)
 
@@ -251,11 +267,11 @@ class Ui_DisplaySettings(object):
 
         self.displayNodeDerivativeLabels_frame = QFrame(DisplaySettings)
         self.displayNodeDerivativeLabels_frame.setObjectName(u"displayNodeDerivativeLabels_frame")
-        self.displayNodeDerivativeLabels_frame.setFrameShape(QFrame.NoFrame)
+        self.displayNodeDerivativeLabels_frame.setFrameShape(QFrame.Shape.NoFrame)
         self.gridLayout = QGridLayout(self.displayNodeDerivativeLabels_frame)
         self.gridLayout.setObjectName(u"gridLayout")
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
-        self.displayNodeDerivativeLabels_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.displayNodeDerivativeLabels_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.gridLayout.addItem(self.displayNodeDerivativeLabels_horizontalSpacer, 0, 0, 1, 1)
 
@@ -313,8 +329,8 @@ class Ui_DisplaySettings(object):
 
         self.displayElements_frame = QFrame(DisplaySettings)
         self.displayElements_frame.setObjectName(u"displayElements_frame")
-        self.displayElements_frame.setFrameShape(QFrame.NoFrame)
-        self.displayElements_frame.setFrameShadow(QFrame.Raised)
+        self.displayElements_frame.setFrameShape(QFrame.Shape.NoFrame)
+        self.displayElements_frame.setFrameShadow(QFrame.Shadow.Raised)
         self.horizontalLayout_4 = QHBoxLayout(self.displayElements_frame)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
@@ -335,7 +351,7 @@ class Ui_DisplaySettings(object):
 
         self.horizontalLayout_4.addWidget(self.displayElementAxes_checkBox)
 
-        self.displayElements_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.displayElements_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_4.addItem(self.displayElements_horizontalSpacer)
 
@@ -344,8 +360,8 @@ class Ui_DisplaySettings(object):
 
         self.displayLines_frame = QFrame(DisplaySettings)
         self.displayLines_frame.setObjectName(u"displayLines_frame")
-        self.displayLines_frame.setFrameShape(QFrame.NoFrame)
-        self.displayLines_frame.setFrameShadow(QFrame.Raised)
+        self.displayLines_frame.setFrameShape(QFrame.Shape.NoFrame)
+        self.displayLines_frame.setFrameShadow(QFrame.Shadow.Raised)
         self.horizontalLayout_5 = QHBoxLayout(self.displayLines_frame)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
@@ -361,7 +377,7 @@ class Ui_DisplaySettings(object):
 
         self.horizontalLayout_5.addWidget(self.displayLinesExterior_checkBox)
 
-        self.displayLines_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.displayLines_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_5.addItem(self.displayLines_horizontalSpacer)
 
@@ -370,8 +386,8 @@ class Ui_DisplaySettings(object):
 
         self.displaySurfaces_frame = QFrame(DisplaySettings)
         self.displaySurfaces_frame.setObjectName(u"displaySurfaces_frame")
-        self.displaySurfaces_frame.setFrameShape(QFrame.NoFrame)
-        self.displaySurfaces_frame.setFrameShadow(QFrame.Raised)
+        self.displaySurfaces_frame.setFrameShape(QFrame.Shape.NoFrame)
+        self.displaySurfaces_frame.setFrameShadow(QFrame.Shadow.Raised)
         self.horizontalLayout_3 = QHBoxLayout(self.displaySurfaces_frame)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
@@ -401,7 +417,7 @@ class Ui_DisplaySettings(object):
 
         self.horizontalLayout_3.addWidget(self.displaySurfacesWireframe_checkBox)
 
-        self.displaySurfaces_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.displaySurfaces_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_3.addItem(self.displaySurfaces_horizontalSpacer)
 
@@ -410,10 +426,10 @@ class Ui_DisplaySettings(object):
 
         self.displayModelCoordinates_frame = QFrame(DisplaySettings)
         self.displayModelCoordinates_frame.setObjectName(u"displayModelCoordinates_frame")
-        self.displayModelCoordinates_frame.setFrameShape(QFrame.NoFrame)
+        self.displayModelCoordinates_frame.setFrameShape(QFrame.Shape.NoFrame)
         self.formLayout_3 = QFormLayout(self.displayModelCoordinates_frame)
         self.formLayout_3.setObjectName(u"formLayout_3")
-        self.formLayout_3.setFieldGrowthPolicy(QFormLayout.FieldsStayAtSizeHint)
+        self.formLayout_3.setFieldGrowthPolicy(QFormLayout.FieldGrowthPolicy.FieldsStayAtSizeHint)
         self.formLayout_3.setContentsMargins(0, 0, 0, 0)
         self.displayModelCoordinates_label = QLabel(self.displayModelCoordinates_frame)
         self.displayModelCoordinates_label.setObjectName(u"displayModelCoordinates_label")
@@ -430,8 +446,8 @@ class Ui_DisplaySettings(object):
 
         self.displayGroup_frame = QFrame(DisplaySettings)
         self.displayGroup_frame.setObjectName(u"displayGroup_frame")
-        self.displayGroup_frame.setFrameShape(QFrame.NoFrame)
-        self.displayGroup_frame.setFrameShadow(QFrame.Raised)
+        self.displayGroup_frame.setFrameShape(QFrame.Shape.NoFrame)
+        self.displayGroup_frame.setFrameShadow(QFrame.Shadow.Raised)
         self.horizontalLayout_9 = QHBoxLayout(self.displayGroup_frame)
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
         self.horizontalLayout_9.setContentsMargins(0, 0, 0, 0)
@@ -442,7 +458,7 @@ class Ui_DisplaySettings(object):
 
         self.displayGroup_fieldChooser = FieldChooserWidget(self.displayGroup_frame)
         self.displayGroup_fieldChooser.setObjectName(u"displayGroup_fieldChooser")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Preferred)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.displayGroup_fieldChooser.sizePolicy().hasHeightForWidth())
@@ -455,10 +471,33 @@ class Ui_DisplaySettings(object):
 
         self.verticalLayout_2.addWidget(self.displayGroup_frame)
 
+        self.displayTheme_frame = QFrame(DisplaySettings)
+        self.displayTheme_frame.setObjectName(u"displayTheme_frame")
+        self.displayTheme_frame.setFrameShape(QFrame.Shape.NoFrame)
+        self.displayTheme_frame.setFrameShadow(QFrame.Shadow.Plain)
+        self.formLayout_2 = QFormLayout(self.displayTheme_frame)
+        self.formLayout_2.setObjectName(u"formLayout_2")
+        self.formLayout_2.setFieldGrowthPolicy(QFormLayout.FieldGrowthPolicy.FieldsStayAtSizeHint)
+        self.formLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.label = QLabel(self.displayTheme_frame)
+        self.label.setObjectName(u"label")
+
+        self.formLayout_2.setWidget(0, QFormLayout.LabelRole, self.label)
+
+        self.comboBox = QComboBox(self.displayTheme_frame)
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.setObjectName(u"comboBox")
+
+        self.formLayout_2.setWidget(0, QFormLayout.FieldRole, self.comboBox)
+
+
+        self.verticalLayout_2.addWidget(self.displayTheme_frame)
+
         self.displayField_frame = QFrame(DisplaySettings)
         self.displayField_frame.setObjectName(u"displayField_frame")
-        self.displayField_frame.setFrameShape(QFrame.NoFrame)
-        self.displayField_frame.setFrameShadow(QFrame.Raised)
+        self.displayField_frame.setFrameShape(QFrame.Shape.NoFrame)
+        self.displayField_frame.setFrameShadow(QFrame.Shadow.Raised)
         self.horizontalLayout_11 = QHBoxLayout(self.displayField_frame)
         self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
         self.horizontalLayout_11.setContentsMargins(0, 0, 0, 0)
@@ -479,7 +518,7 @@ class Ui_DisplaySettings(object):
 
         self.horizontalLayout_11.addWidget(self.displayFieldContoursCount_spinBox)
 
-        self.displayFieldContours_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.displayFieldContours_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_11.addItem(self.displayFieldContours_horizontalSpacer)
 
@@ -488,8 +527,8 @@ class Ui_DisplaySettings(object):
 
         self.displayTime_frame = QFrame(DisplaySettings)
         self.displayTime_frame.setObjectName(u"displayTime_frame")
-        self.displayTime_frame.setFrameShape(QFrame.NoFrame)
-        self.displayTime_frame.setFrameShadow(QFrame.Raised)
+        self.displayTime_frame.setFrameShape(QFrame.Shape.NoFrame)
+        self.displayTime_frame.setFrameShadow(QFrame.Shadow.Raised)
         self.horizontalLayout_13 = QHBoxLayout(self.displayTime_frame)
         self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
         self.horizontalLayout_13.setContentsMargins(0, 0, 0, 0)
@@ -500,7 +539,7 @@ class Ui_DisplaySettings(object):
 
         self.displayTime_lineEdit = QLineEdit(self.displayTime_frame)
         self.displayTime_lineEdit.setObjectName(u"displayTime_lineEdit")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         sizePolicy2.setHorizontalStretch(1)
         sizePolicy2.setVerticalStretch(0)
         sizePolicy2.setHeightForWidth(self.displayTime_lineEdit.sizePolicy().hasHeightForWidth())
@@ -510,20 +549,20 @@ class Ui_DisplaySettings(object):
 
         self.displayTime_horizontalSlider = QSlider(self.displayTime_frame)
         self.displayTime_horizontalSlider.setObjectName(u"displayTime_horizontalSlider")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         sizePolicy3.setHorizontalStretch(3)
         sizePolicy3.setVerticalStretch(0)
         sizePolicy3.setHeightForWidth(self.displayTime_horizontalSlider.sizePolicy().hasHeightForWidth())
         self.displayTime_horizontalSlider.setSizePolicy(sizePolicy3)
-        self.displayTime_horizontalSlider.setOrientation(Qt.Horizontal)
-        self.displayTime_horizontalSlider.setTickPosition(QSlider.NoTicks)
+        self.displayTime_horizontalSlider.setOrientation(Qt.Orientation.Horizontal)
+        self.displayTime_horizontalSlider.setTickPosition(QSlider.TickPosition.NoTicks)
 
         self.horizontalLayout_13.addWidget(self.displayTime_horizontalSlider)
 
 
         self.verticalLayout_2.addWidget(self.displayTime_frame)
 
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_2.addItem(self.verticalSpacer)
 
@@ -547,8 +586,8 @@ class Ui_DisplaySettings(object):
 #endif // QT_CONFIG(tooltip)
         self.displayDataEmbedded_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Data embedded", None))
         self.displayDataProjectionPoints_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Data projection points", None))
-        self.displayDataContours_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Data contours", None))
         self.displayDataRadius_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Data radius", None))
+        self.displayDataGroup_label.setText(QCoreApplication.translate("DisplaySettings", u"Data group:", None))
         self.displayDataFieldLabels_label.setText(QCoreApplication.translate("DisplaySettings", u"Data field label:", None))
         self.displayDataFieldLabelsNone_radioButton.setText(QCoreApplication.translate("DisplaySettings", u"None", None))
         self.displayDataFieldLabelsValue_radioButton.setText(QCoreApplication.translate("DisplaySettings", u"Value", None))
@@ -588,6 +627,10 @@ class Ui_DisplaySettings(object):
 #if QT_CONFIG(tooltip)
         self.displayGroup_fieldChooser.setToolTip(QCoreApplication.translate("DisplaySettings", u"<html><head/><body><p>Optional group to limit display of model and data to.</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
+        self.label.setText(QCoreApplication.translate("DisplaySettings", u"Theme:", None))
+        self.comboBox.setItemText(0, QCoreApplication.translate("DisplaySettings", u"Dark", None))
+        self.comboBox.setItemText(1, QCoreApplication.translate("DisplaySettings", u"Light", None))
+
         self.displayFieldColourBar_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Field colour bar", None))
         self.displayFieldContours_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Field contours:", None))
         self.displayTime_label.setText(QCoreApplication.translate("DisplaySettings", u"Time:", None))
