@@ -196,30 +196,6 @@ class Ui_DisplaySettings(object):
 
         self.verticalLayout.addWidget(self.displayDataMarkers_frame)
 
-        self.displayMarker_frame = QFrame(self.displayData_frame)
-        self.displayMarker_frame.setObjectName(u"displayMarker_frame")
-        self.displayMarker_frame.setFrameShape(QFrame.Shape.NoFrame)
-        self.displayMarker_frame.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_2 = QHBoxLayout(self.displayMarker_frame)
-        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.displayMarkerPoints_checkBox = QCheckBox(self.displayMarker_frame)
-        self.displayMarkerPoints_checkBox.setObjectName(u"displayMarkerPoints_checkBox")
-
-        self.horizontalLayout_2.addWidget(self.displayMarkerPoints_checkBox)
-
-        self.displayMarkerNames_checkBox = QCheckBox(self.displayMarker_frame)
-        self.displayMarkerNames_checkBox.setObjectName(u"displayMarkerNames_checkBox")
-
-        self.horizontalLayout_2.addWidget(self.displayMarkerNames_checkBox)
-
-        self.displayMarker_horizontalSpacer = QSpacerItem(750, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.horizontalLayout_2.addItem(self.displayMarker_horizontalSpacer)
-
-
-        self.verticalLayout.addWidget(self.displayMarker_frame)
-
 
         self.verticalLayout_2.addWidget(self.displayData_frame)
 
@@ -327,37 +303,6 @@ class Ui_DisplaySettings(object):
 
         self.verticalLayout_2.addWidget(self.displayNodeDerivativeLabels_frame)
 
-        self.displayElements_frame = QFrame(DisplaySettings)
-        self.displayElements_frame.setObjectName(u"displayElements_frame")
-        self.displayElements_frame.setFrameShape(QFrame.Shape.NoFrame)
-        self.displayElements_frame.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_4 = QHBoxLayout(self.displayElements_frame)
-        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.displayElementNumbers_checkBox = QCheckBox(self.displayElements_frame)
-        self.displayElementNumbers_checkBox.setObjectName(u"displayElementNumbers_checkBox")
-
-        self.horizontalLayout_4.addWidget(self.displayElementNumbers_checkBox)
-
-        self.displayElementFieldPoints_checkBox = QCheckBox(self.displayElements_frame)
-        self.displayElementFieldPoints_checkBox.setObjectName(u"displayElementFieldPoints_checkBox")
-
-        self.horizontalLayout_4.addWidget(self.displayElementFieldPoints_checkBox)
-
-        self.displayElementAxes_checkBox = QCheckBox(self.displayElements_frame)
-        self.displayElementAxes_checkBox.setObjectName(u"displayElementAxes_checkBox")
-        sizePolicy.setHeightForWidth(self.displayElementAxes_checkBox.sizePolicy().hasHeightForWidth())
-        self.displayElementAxes_checkBox.setSizePolicy(sizePolicy)
-
-        self.horizontalLayout_4.addWidget(self.displayElementAxes_checkBox)
-
-        self.displayElements_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.horizontalLayout_4.addItem(self.displayElements_horizontalSpacer)
-
-
-        self.verticalLayout_2.addWidget(self.displayElements_frame)
-
         self.displayLines_frame = QFrame(DisplaySettings)
         self.displayLines_frame.setObjectName(u"displayLines_frame")
         self.displayLines_frame.setFrameShape(QFrame.Shape.NoFrame)
@@ -423,6 +368,61 @@ class Ui_DisplaySettings(object):
 
 
         self.verticalLayout_2.addWidget(self.displaySurfaces_frame)
+
+        self.displayElements_frame = QFrame(DisplaySettings)
+        self.displayElements_frame.setObjectName(u"displayElements_frame")
+        self.displayElements_frame.setFrameShape(QFrame.Shape.NoFrame)
+        self.displayElements_frame.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.displayElements_frame)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.displayElementNumbers_checkBox = QCheckBox(self.displayElements_frame)
+        self.displayElementNumbers_checkBox.setObjectName(u"displayElementNumbers_checkBox")
+
+        self.horizontalLayout_4.addWidget(self.displayElementNumbers_checkBox)
+
+        self.displayElementFieldPoints_checkBox = QCheckBox(self.displayElements_frame)
+        self.displayElementFieldPoints_checkBox.setObjectName(u"displayElementFieldPoints_checkBox")
+
+        self.horizontalLayout_4.addWidget(self.displayElementFieldPoints_checkBox)
+
+        self.displayElementAxes_checkBox = QCheckBox(self.displayElements_frame)
+        self.displayElementAxes_checkBox.setObjectName(u"displayElementAxes_checkBox")
+        sizePolicy.setHeightForWidth(self.displayElementAxes_checkBox.sizePolicy().hasHeightForWidth())
+        self.displayElementAxes_checkBox.setSizePolicy(sizePolicy)
+
+        self.horizontalLayout_4.addWidget(self.displayElementAxes_checkBox)
+
+        self.displayElements_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.horizontalLayout_4.addItem(self.displayElements_horizontalSpacer)
+
+
+        self.verticalLayout_2.addWidget(self.displayElements_frame)
+
+        self.displayMarker_frame = QFrame(DisplaySettings)
+        self.displayMarker_frame.setObjectName(u"displayMarker_frame")
+        self.displayMarker_frame.setFrameShape(QFrame.Shape.NoFrame)
+        self.displayMarker_frame.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_2 = QHBoxLayout(self.displayMarker_frame)
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.displayMarkerPoints_checkBox = QCheckBox(self.displayMarker_frame)
+        self.displayMarkerPoints_checkBox.setObjectName(u"displayMarkerPoints_checkBox")
+
+        self.horizontalLayout_2.addWidget(self.displayMarkerPoints_checkBox)
+
+        self.displayMarkerNames_checkBox = QCheckBox(self.displayMarker_frame)
+        self.displayMarkerNames_checkBox.setObjectName(u"displayMarkerNames_checkBox")
+
+        self.horizontalLayout_2.addWidget(self.displayMarkerNames_checkBox)
+
+        self.displayMarker_horizontalSpacer = QSpacerItem(750, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.horizontalLayout_2.addItem(self.displayMarker_horizontalSpacer)
+
+
+        self.verticalLayout_2.addWidget(self.displayMarker_frame)
 
         self.displayModelCoordinates_frame = QFrame(DisplaySettings)
         self.displayModelCoordinates_frame.setObjectName(u"displayModelCoordinates_frame")
@@ -595,8 +595,6 @@ class Ui_DisplaySettings(object):
         self.displayDataMarkerPoints_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Marker data points", None))
         self.displayDataMarkerNames_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Marker data names", None))
         self.displayDataMarkerProjections_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Marker data projections", None))
-        self.displayMarkerPoints_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Marker points", None))
-        self.displayMarkerNames_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Marker names", None))
         self.displayNodePoints_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Node points", None))
         self.displayNodeNumbers_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Node numbers", None))
 #if QT_CONFIG(tooltip)
@@ -613,15 +611,17 @@ class Ui_DisplaySettings(object):
         self.displayNodeDerivativeLabelsD13_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"D13", None))
         self.displayNodeDerivativeLabelsD23_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"D23", None))
         self.displayNodeDerivativeLabelsD123_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"D123", None))
-        self.displayElementNumbers_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Element numbers", None))
-        self.displayElementFieldPoints_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Element field points", None))
-        self.displayElementAxes_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Element axes", None))
         self.displayLines_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Lines", None))
         self.displayLinesExterior_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Exterior", None))
         self.displaySurfaces_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Surfaces", None))
         self.displaySurfacesExterior_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Exterior", None))
         self.displaySurfacesTranslucent_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Transluc.", None))
         self.displaySurfacesWireframe_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Wireframe", None))
+        self.displayElementNumbers_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Element numbers", None))
+        self.displayElementFieldPoints_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Element field points", None))
+        self.displayElementAxes_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Element axes", None))
+        self.displayMarkerPoints_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Marker points", None))
+        self.displayMarkerNames_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Marker names", None))
         self.displayModelCoordinates_label.setText(QCoreApplication.translate("DisplaySettings", u"Model coordinates:", None))
         self.displayGroup_label.setText(QCoreApplication.translate("DisplaySettings", u"Group:", None))
 #if QT_CONFIG(tooltip)
