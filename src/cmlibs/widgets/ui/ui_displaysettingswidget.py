@@ -26,7 +26,7 @@ class Ui_DisplaySettings(object):
     def setupUi(self, DisplaySettings):
         if not DisplaySettings.objectName():
             DisplaySettings.setObjectName(u"DisplaySettings")
-        DisplaySettings.resize(999, 729)
+        DisplaySettings.resize(870, 729)
         DisplaySettings.setMaximumSize(QSize(16777215, 16777215))
         self.verticalLayout_2 = QVBoxLayout(DisplaySettings)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
@@ -479,17 +479,17 @@ class Ui_DisplaySettings(object):
         self.formLayout_2.setObjectName(u"formLayout_2")
         self.formLayout_2.setFieldGrowthPolicy(QFormLayout.FieldGrowthPolicy.FieldsStayAtSizeHint)
         self.formLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.label = QLabel(self.displayTheme_frame)
-        self.label.setObjectName(u"label")
+        self.displayTheme_label = QLabel(self.displayTheme_frame)
+        self.displayTheme_label.setObjectName(u"displayTheme_label")
 
-        self.formLayout_2.setWidget(0, QFormLayout.LabelRole, self.label)
+        self.formLayout_2.setWidget(0, QFormLayout.LabelRole, self.displayTheme_label)
 
-        self.comboBox = QComboBox(self.displayTheme_frame)
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.setObjectName(u"comboBox")
+        self.displayTheme_comboBox = QComboBox(self.displayTheme_frame)
+        self.displayTheme_comboBox.addItem("")
+        self.displayTheme_comboBox.addItem("")
+        self.displayTheme_comboBox.setObjectName(u"displayTheme_comboBox")
 
-        self.formLayout_2.setWidget(0, QFormLayout.FieldRole, self.comboBox)
+        self.formLayout_2.setWidget(0, QFormLayout.FieldRole, self.displayTheme_comboBox)
 
 
         self.verticalLayout_2.addWidget(self.displayTheme_frame)
@@ -627,9 +627,9 @@ class Ui_DisplaySettings(object):
 #if QT_CONFIG(tooltip)
         self.displayGroup_fieldChooser.setToolTip(QCoreApplication.translate("DisplaySettings", u"<html><head/><body><p>Optional group to limit display of model and data to.</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
-        self.label.setText(QCoreApplication.translate("DisplaySettings", u"Theme:", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("DisplaySettings", u"Dark", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("DisplaySettings", u"Light", None))
+        self.displayTheme_label.setText(QCoreApplication.translate("DisplaySettings", u"Theme:", None))
+        self.displayTheme_comboBox.setItemText(0, QCoreApplication.translate("DisplaySettings", u"Dark", None))
+        self.displayTheme_comboBox.setItemText(1, QCoreApplication.translate("DisplaySettings", u"Light", None))
 
         self.displayFieldColourBar_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Field colour bar", None))
         self.displayFieldContours_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Field contours:", None))
