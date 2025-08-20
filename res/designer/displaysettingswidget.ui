@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>870</width>
-    <height>729</height>
+    <width>874</width>
+    <height>737</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -129,6 +129,13 @@
           </widget>
          </item>
          <item>
+          <widget class="QCheckBox" name="displayDataProjectionPoints_checkBox">
+           <property name="text">
+            <string>Data projection points</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QCheckBox" name="displayDataProjectionTangents_checkBox">
            <property name="text">
             <string>Data projection tangents</string>
@@ -149,13 +156,6 @@
            </property>
            <property name="text">
             <string>Data embedded</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="displayDataProjectionPoints_checkBox">
-           <property name="text">
-            <string>Data projection points</string>
            </property>
           </widget>
          </item>

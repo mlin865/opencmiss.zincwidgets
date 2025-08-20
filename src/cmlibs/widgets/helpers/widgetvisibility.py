@@ -46,7 +46,6 @@ def _display_settings_visibility(widget, setting_group):
         widget.displayField_frame.setVisible(False)
         widget.displayDataLines_checkBox.setVisible(False)
         widget.displayModelCoordinates_frame.setVisible(False)
-        widget.displayDataProjectionPoints_checkBox.setVisible(False)
         widget.displayElementFieldPoints_checkBox.setVisible(False)
         widget.displayNodeDerivativesVersion_spinBox.setVisible(False)
         widget.displayModelRadius_checkBox.setVisible(False)

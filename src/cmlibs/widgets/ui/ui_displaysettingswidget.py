@@ -26,7 +26,7 @@ class Ui_DisplaySettings(object):
     def setupUi(self, DisplaySettings):
         if not DisplaySettings.objectName():
             DisplaySettings.setObjectName(u"DisplaySettings")
-        DisplaySettings.resize(870, 729)
+        DisplaySettings.resize(874, 737)
         DisplaySettings.setMaximumSize(QSize(16777215, 16777215))
         self.verticalLayout_2 = QVBoxLayout(DisplaySettings)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
@@ -81,6 +81,11 @@ class Ui_DisplaySettings(object):
 
         self.horizontalLayout.addWidget(self.displayDataProjections_checkBox)
 
+        self.displayDataProjectionPoints_checkBox = QCheckBox(self.displayDataPoints_frame)
+        self.displayDataProjectionPoints_checkBox.setObjectName(u"displayDataProjectionPoints_checkBox")
+
+        self.horizontalLayout.addWidget(self.displayDataProjectionPoints_checkBox)
+
         self.displayDataProjectionTangents_checkBox = QCheckBox(self.displayDataPoints_frame)
         self.displayDataProjectionTangents_checkBox.setObjectName(u"displayDataProjectionTangents_checkBox")
 
@@ -95,11 +100,6 @@ class Ui_DisplaySettings(object):
         self.displayDataEmbedded_checkBox.setObjectName(u"displayDataEmbedded_checkBox")
 
         self.horizontalLayout.addWidget(self.displayDataEmbedded_checkBox)
-
-        self.displayDataProjectionPoints_checkBox = QCheckBox(self.displayDataPoints_frame)
-        self.displayDataProjectionPoints_checkBox.setObjectName(u"displayDataProjectionPoints_checkBox")
-
-        self.horizontalLayout.addWidget(self.displayDataProjectionPoints_checkBox)
 
         self.displayDataRadius_checkBox = QCheckBox(self.displayDataPoints_frame)
         self.displayDataRadius_checkBox.setObjectName(u"displayDataRadius_checkBox")
@@ -579,13 +579,13 @@ class Ui_DisplaySettings(object):
         self.displayZeroJacobianContours_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Zero Jacobian contours", None))
         self.displayDataPoints_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Data points", None))
         self.displayDataProjections_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Data projections", None))
+        self.displayDataProjectionPoints_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Data projection points", None))
         self.displayDataProjectionTangents_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Data projection tangents", None))
         self.displayDataLines_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Data lines", None))
 #if QT_CONFIG(tooltip)
         self.displayDataEmbedded_checkBox.setToolTip(QCoreApplication.translate("DisplaySettings", u"<html><head/><body><p>Show data embedded in model coordinates.</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
         self.displayDataEmbedded_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Data embedded", None))
-        self.displayDataProjectionPoints_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Data projection points", None))
         self.displayDataRadius_checkBox.setText(QCoreApplication.translate("DisplaySettings", u"Data radius", None))
         self.displayDataGroup_label.setText(QCoreApplication.translate("DisplaySettings", u"Data group:", None))
         self.displayDataFieldLabels_label.setText(QCoreApplication.translate("DisplaySettings", u"Data field label:", None))
